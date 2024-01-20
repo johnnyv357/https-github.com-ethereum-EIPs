@@ -1,7 +1,23 @@
 class Block {
-    constructor({timestamp,lastHash,hash,data}){
+    constructor(timestamp, lastHash, hash, data, address, verification){
         this.timestamp = timestamp;
         this.lastHash = lastHash;
         this.hash = hash;
         this.data = data;
+        this.crypto = address;
+        this.object = verification;
+    }
+
+    toString() {
+        return `Block -
+            Timestamp: ${this.timestamp}
+            Last Hash: ${this.lastHash.substring(0, 10)}
+            Hash     : ${this.hash.substring(0, 10)}
+            Data     : ${this.data}
+            crypto   : ${this.address}
+            object   : ${this.verification}`;
+    }
+
+    static gensis() {
+        return new this('
         
