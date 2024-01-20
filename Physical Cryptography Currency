@@ -19,5 +19,9 @@ class Block {
     }
 
     static gensis() {
-        return new this('
+        return new this('2024', '----Last Hash----', 'THE HASH', 'default address', 'symmetric value', []);
+    }
+}
+
+module.exports = Block;
         
